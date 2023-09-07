@@ -1,0 +1,50 @@
+@import '../main.scss';
+
+.support{
+    &__box{
+        background-color: $colorOrange;
+        border-radius: 25px;
+        padding: 150px 130px;
+    }
+    &__title{
+        text-align: center;
+        font-family: 'Object-M';
+        &.little{
+            font-size: 72px;
+        }
+        &.big{
+            color: #fff;
+            font-size: 333px;
+            margin: 40px 0px;
+            line-height: 90%;
+        }
+    }
+    &__info{
+        @include df-jcc;
+        margin: 100px 0px 80px;
+        p{
+            color: #fff;
+            max-width: 872px;
+            font-size: 32px;
+            line-height: 130%;
+            text-align: center;
+        }
+    }
+    &__btn{
+        @include df-jcc;
+        a{
+            @include df-aic-jcc;
+            width: 675px;
+            height: 140px;
+            background-color: #fff;
+            border-radius: 200px;
+            font-family: 'Object-M';
+            font-size: 44px;
+            @include tr(.2s);
+            &:hover{
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+}

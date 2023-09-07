@@ -1,0 +1,115 @@
+@import '../main.scss';
+@import '@splidejs/vue-splide/css';
+
+.welcome {
+    &__container{
+        padding: 0px 100px;
+    }
+    &__slider{
+        .slideWrap{
+            &__arrow{
+                width: 70px;
+                height: 100%;
+                border-radius: 0;
+                background: 0;
+                @include tr(.2s);
+                svg{
+                    filter: invert(1);
+                    zoom: 130%;
+                }
+                &:hover{
+                    background-color: #ffffff20;
+                }
+                &:active{
+                    background-color: #ffffff69;
+                }
+            }
+            &__prev{
+                left: 0;
+            }
+            &__next{
+                right: 0;
+            }
+            &__page{
+                width: 85px;
+                height: 3px;
+                border-radius: 2px;
+                &.is-active{
+                    transform: unset;
+                    opacity: 1;
+                }
+            }
+            &__box{
+                color: #fff;
+                width: 100%;
+                height: 100%;
+                @include df-jcc;
+                flex-direction: column;
+            }
+            &__title{
+                font-family: 'Object-B';
+                font-size: 72px;
+                line-height: 110%;
+                max-width: 550px;
+            }
+            &__info{
+                font-family: 'Object-M';
+                font-size: 28px;
+                line-height: 120%;
+                max-width: 420px;
+                margin-top: 25px;
+            }
+        }
+    }
+    // &__bot{
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    // }
+    &__list{
+        padding: 5px;
+        display: flex;
+        gap: 20px;
+        .item{
+            flex-basis: 33.3333%;
+            width: 33.3333%;
+            &__box{
+                display: flex;
+                gap: 10px;
+            }
+            &__img{
+                border-radius: 10px;
+                object-fit: cover;
+                object-position: center;
+                width: 205px;
+                height: 140px;
+                overflow: hidden;
+                img{
+                    @include tr(.2s);
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+            &__right{
+                padding: 5px 0px;
+                *{
+                    font-size: 18px;
+                    line-height: 120%;
+                }
+            }
+            &__date{
+                font-family: 'Object-B';
+            }
+            &__title{
+                @include oh(4);
+                @include tr(.2s);
+                &:hover{
+                    color: $colorOrange;
+                }
+            }
+        }
+    }
+}

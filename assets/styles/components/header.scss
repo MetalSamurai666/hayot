@@ -1,0 +1,97 @@
+@import '../main.scss';
+
+.header{
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(25px);
+    @include tr(.3s);
+    z-index: 10;
+    &__box{
+        @include df-aic;
+        position: relative;
+    }
+    /* Left Section */
+    &__left{
+        padding-left: 30px;
+    }
+    &__logo{
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        @include tr(.3s);
+        img{
+            width: 120px;
+            height: 120px;
+            @include tr(.3s);
+        }
+    }
+    /* Middle Section */
+    &__mid{
+        padding-left: 150px;
+    }
+    &__nav{
+        @include df-aic;
+        gap: 30px;
+        padding-left: 30px;
+        *{
+            font-family: 'Object-M';
+        }
+        .item{
+            margin: -5px;
+            &__link{
+                padding: 5px;
+                @include tr(.2s);
+                &:hover{
+                    color: $colorOrange;
+                }
+            }
+        }
+    }
+    /* Right Section */
+    &__right{
+        margin-left: auto;
+        @include df-aic;
+    }
+    &__lang{
+        .item{
+            font-family: 'Object-M';
+            padding: 20px;
+        }
+    }
+    &__donate{
+        a{
+            padding: 25px;
+            background-color: $colorOrange;
+            color: #fff;
+            font-size: 20px;
+            font-family: 'Object-B';
+            @include tr(.2s);
+            &:hover{
+                background-color: darken($colorOrange, 5%);
+            }
+        }
+    }
+    /* Alt header on scroll */
+    &.alt{
+        background: rgba(255, 255, 255, 0.50);
+        .header__logo{
+            top: 5px;
+            left: 50px;
+            img{
+                width: 60px;
+                height: 60px;
+            }
+        }
+        // .header__nav{
+        //     .item{
+        //         &__link{
+        //             &:hover{
+        //                 color: #fff;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+}

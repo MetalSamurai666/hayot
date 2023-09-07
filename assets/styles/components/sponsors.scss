@@ -1,0 +1,60 @@
+@import '../main.scss';
+
+.sponsors{
+    padding: 50px 0px;
+    &__box{
+        background-color: #F2F2F2;
+        border-radius: 25px;
+        padding: 90px 0px 60px;
+        position: relative;
+    }
+    &__hearts{
+        .item{
+            position: absolute;
+            height: fit-content;
+            &:first-child{
+                top: 70px;
+                right: -10px;
+            }
+            &:last-child{
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                display: block;
+                left: -10px;
+                .item__img{
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+    &__top{
+        padding: 0px 200px;
+        text-align: center;
+    }
+    &__title{
+        font-family: 'Object-B';
+        font-size: 78px;
+        line-height: 120%;
+    }
+    &__info{
+        font-size: 32px;
+        line-height: 130%;
+        margin-top: 50px;
+    }
+    &__carousel{
+        @include df-aic;
+        gap: 50px;
+        margin-top: 60px;
+        overflow-x: hidden;
+        .item{
+            &__img{
+                img{
+                    width: 350px;
+                    filter: brightness(0);
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

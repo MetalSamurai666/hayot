@@ -1,0 +1,41 @@
+@import '../main.scss';
+
+.maintenance{
+    &__box{
+        padding: 100px 0px 140px;
+    }
+    &__title{
+        font-family: 'Object-B';
+        font-size: 72px;
+        line-height: 85%;
+        text-align: center;
+        span{
+            font-family: 'Object-B';
+            color: $colorOrange;
+        }
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+        padding-top: 55px;
+    }
+    &__take{
+        margin-top: 100px;
+        @include df-jcc;
+        a{
+            background-color: $colorOrange;
+            color: #fff;
+            width: 770px;
+            height: 140px;
+            border-radius: 75px;
+            font-family: 'Object-M';
+            font-size: 44px;
+            @include df-aic-jcc;
+            @include tr(.2s);
+            &:hover{
+                background-color: darken($colorOrange, 5%);
+            }
+        }
+    }
+}
