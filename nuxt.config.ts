@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt', 
     '@nuxtjs/i18n',
-    
   ],
   i18n: {
     defaultLocale: 'ru',

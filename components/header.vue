@@ -2,11 +2,8 @@
     import { storeToRefs } from "pinia";
     import { useMainStore } from "~/store/main";
     
-    
     const mainStore = useMainStore()
     const { cats }  = storeToRefs(mainStore)
-
-
 
     const { locale, locales, setLocale } = useI18n()
 
@@ -58,6 +55,17 @@
             </div>
 
             <div class="header__right">
+                <div class="header__search">
+                    <div class="search-box">
+                        <input type="text" class="search-box-input" placeholder="What are you looking for ?">
+                        <button class="search-box-btn">
+                            <div class="search-box-icon">
+                                <img src="/logo/search.svg">
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
                 <div class="header__lang">
                     <div class="item">Ру</div>
                     <!-- <a

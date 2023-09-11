@@ -1,8 +1,8 @@
-<script setup>
-    import cardList from "./cards/cardList.vue"
+<script setup lang="ts">
+    import cardList from './cards/cardList.vue';
 
-    const list = ref([
-        {
+    const items = [
+    {
             id: 1,
             link: '/',
             title: "Buddy",
@@ -86,27 +86,62 @@
             img: "https://images.dog.ceo/breeds/cotondetulear/100_2397.jpg",
             slug: "oliver-dog"
         }
-    ])
+    ];
+
+    const numbers = [250, 300, 350, 400];
+
+    function getRandomNumber() {
+        const randomIndex = Math.floor(Math.random() * numbers.length);
+        
+        const randomNumber = numbers[randomIndex];
+        
+        return randomNumber;
+    }
+
+    // const randomNum = getRandomNumber();
+    // console.log("Randomly picked number:", randomNum);
+
+
+
+    function append() {
+        console.log('append');
+        
+    }
 </script>
 
 <template>
-    <div class="maintenance">
-        <div class="container">
-            <div class="maintenance__box">
-                <div class="maintenance__title" v-html="$t('dogs_number')"></div>
-
-                <ul class="maintenance__list">
-                    <li class="item" v-for="item of list" :key="item?.id">
-                        <card-list
-                            :card="item"
-                        />
+    <div class="list">
+        <div class="container-m">
+            <div class="list__box">
+                <ul class="list__btns">
+                    <li class="item filter">
+                        <button>
+                            <div class="item__img">
+                                <img src="/logo/filter.svg">
+                            </div>
+                            <span class="item__title">Фильтры</span>
+                        </button>
+                    </li>
+                    <li class="item date">
+                        <button>
+                            <div class="item__img">
+                                <img src="/logo/calendar.svg">
+                            </div>
+                            <span class="item__title">По дате</span>
+                        </button>
                     </li>
                 </ul>
 
-                <div class="maintenance__take">
-                    <NuxtLink to="/">
-                        {{ $t('take_pet') }}
-                    </NuxtLink>
+                <div class="list__masonry">
+                    <masonry-wall :items="items" :ssr-columns="1" :column-width="300" :gap="15" @append="append">
+                        <template #default="{ item }" >
+                            <div :style="{ height: `${getRandomNumber()}px` }" class="list__item">
+                                <card-list
+                                    :card="item"
+                                />
+                            </div>
+                        </template>
+                    </masonry-wall>
                 </div>
             </div>
         </div>
@@ -114,5 +149,5 @@
 </template>
 
 <style lang="scss">
-@import '@/assets/styles/components/maintenance.scss';
+@import '@/assets/styles/components/list.scss';
 </style>

@@ -19,6 +19,9 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 25px;
         padding-top: 55px;
+        .item{
+            height: 370px;
+        }
     }
     &__take{
         margin-top: 100px;
