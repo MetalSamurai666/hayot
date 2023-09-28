@@ -1,0 +1,16 @@
+@import '../main.scss';
+
+.filter{
+    &__box{
+        padding: 30px 0px;
+        @include df-aic-jcsb;
+    }
+    &__list{
+        @include df-aic;
+        gap: 20px;
+    }
+    &__btns{
+        @include df-aic;
+        gap: 20px;
+    }
+}

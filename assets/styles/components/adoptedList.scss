@@ -1,0 +1,13 @@
+@import '../main.scss';
+
+.adoptedList{
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        padding-bottom: 125px;
+        .item{
+            height: 750px;
+        }
+    }
+}

@@ -1,12 +1,20 @@
-<script setup lang="ts">
+<script setup>
     import cardList from './cards/cardList.vue';
 
+    defineProps({
+        list: Object
+    })
+
     const items = [
-    {
+        {
             id: 1,
-            link: '/',
+            link: '/dogs/buddy',
             title: "Buddy",
             img: "https://images.dog.ceo/breeds/bulldog-english/murphy.jpg",
+            breed: 'Без породы',
+            gender: true,
+            age: '8',
+            size: 'Крупная',
             slug: "buddy-dog"
         },
         {
@@ -14,6 +22,10 @@
             link: '/',
             title: "Charlie",
             img: "https://images.dog.ceo/breeds/schnauzer-giant/n02097130_5750.jpg",
+            breed: 'Без породы',
+            gender: true,
+            age: '8',
+            size: 'Средняя',
             slug: "charlie-dog"
         },
         {
@@ -21,6 +33,10 @@
             link: '/',
             title: "Lucy",
             img: "https://images.dog.ceo/breeds/setter-irish/n02100877_602.jpg",
+            breed: 'Без породы',
+            gender: false,
+            age: '8',
+            size: 'Маленькая',
             slug: "lucy-dog"
         },
         {
@@ -28,6 +44,10 @@
             link: '/',
             title: "Cooper",
             img: "https://images.dog.ceo/breeds/schipperke/n02104365_6755.jpg",
+            breed: 'Без породы',
+            gender: true,
+            age: '8',
+            size: 'Крупная',
             slug: "cooper-dog"
         },
         {
@@ -35,6 +55,10 @@
             link: '/',
             title: "Bailey",
             img: "https://images.dog.ceo/breeds/bluetick/n02088632_2145.jpg",
+            breed: 'Без породы',
+            gender: true,
+            age: '8',
+            size: 'Маленькая',
             slug: "bailey-dog"
         },
         {
@@ -42,6 +66,10 @@
             link: '/',
             title: "Max",
             img: "https://images.dog.ceo/breeds/redbone/n02090379_4324.jpg",
+            breed: 'Без породы',
+            gender: true,
+            age: '8',
+            size: 'Крупная',
             slug: "max-dog"
         },
         {
@@ -49,6 +77,10 @@
             link: '/',
             title: "Luna",
             img: "https://images.dog.ceo/breeds/hound-blood/n02088466_8156.jpg",
+            breed: 'Без породы',
+            gender: false,
+            age: '8',
+            size: 'Крупная',
             slug: "luna-dog"
         },
         {
@@ -56,6 +88,10 @@
             link: '/',
             title: "Rocky",
             img: "https://images.dog.ceo/breeds/mastiff-tibetan/n02108551_3814.jpg",
+            breed: 'Без породы',
+            gender: true,
+            age: '8',
+            size: 'Крупная',
             slug: "rocky-dog"
         },
         {
@@ -63,6 +99,10 @@
             link: '/',
             title: "Molly",
             img: "https://images.dog.ceo/breeds/hound-afghan/n02088094_4143.jpg",
+            breed: 'Без породы',
+            gender: false,
+            age: '4',
+            size: 'Крупная',
             slug: "molly-dog"
         },
         {
@@ -70,6 +110,10 @@
             link: '/',
             title: "Duke",
             img: "https://images.dog.ceo/breeds/terrier-welsh/lucy.jpg",
+            breed: 'Без породы',
+            gender: true,
+            age: '8',
+            size: 'Крупная',
             slug: "duke-dog"
         },
         {
@@ -77,6 +121,10 @@
             link: '/',
             title: "Zoe",
             img: "https://images.dog.ceo/breeds/labrador/n02099712_3185.jpg",
+            breed: 'Без породы',
+            gender: false,
+            age: '8',
+            size: 'Крупная',
             slug: "zoe-dog"
         },
         {
@@ -84,11 +132,15 @@
             link: '/',
             title: "Oliver",
             img: "https://images.dog.ceo/breeds/cotondetulear/100_2397.jpg",
-            slug: "oliver-dog"
+            breed: 'Без породы',
+            gender: true,
+            age: '8',
+            size: 'Крупная',
+            slug: "oliver-dog",
         }
     ];
 
-    const numbers = [250, 300, 350, 400];
+    const numbers = [350, 375, 400, 425];
 
     function getRandomNumber() {
         const randomIndex = Math.floor(Math.random() * numbers.length);
@@ -98,56 +150,34 @@
         return randomNumber;
     }
 
-    // const randomNum = getRandomNumber();
-    // console.log("Randomly picked number:", randomNum);
-
-
-
-    function append() {
-        console.log('append');
-        
-    }
 </script>
 
 <template>
-    <div class="list">
-        <div class="container-m">
-            <div class="list__box">
-                <ul class="list__btns">
-                    <li class="item filter">
-                        <button>
-                            <div class="item__img">
-                                <img src="/logo/filter.svg">
-                            </div>
-                            <span class="item__title">Фильтры</span>
-                        </button>
-                    </li>
-                    <li class="item date">
-                        <button>
-                            <div class="item__img">
-                                <img src="/logo/calendar.svg">
-                            </div>
-                            <span class="item__title">По дате</span>
-                        </button>
-                    </li>
-                </ul>
+    <div class="cardList">
+        <div class="container">
+            <ul class="cardList__filter">
+                <li class="item" v-for="item, index of list?.filter" :key="index">
+                    <button class="item__box">
+                        <div class="item__title">{{ item?.title }}</div>
+                    </button>
+                </li>
+            </ul>
 
-                <div class="list__masonry">
-                    <masonry-wall :items="items" :ssr-columns="1" :column-width="300" :gap="15" @append="append">
-                        <template #default="{ item }" >
-                            <div :style="{ height: `${getRandomNumber()}px` }" class="list__item">
-                                <card-list
-                                    :card="item"
-                                />
-                            </div>
-                        </template>
-                    </masonry-wall>
-                </div>
+            <div class="cardList__masonry">
+                <masonry-wall :items="items" :ssr-columns="1" :column-width="250" :gap="15">
+                    <template #default="{ item }" >
+                        <div :style="{ height: `${getRandomNumber()}px` }" class="cardList__item">
+                            <card-list
+                                :card="item"
+                            />
+                        </div>
+                    </template>
+                </masonry-wall>
             </div>
         </div>
     </div>
 </template>
 
 <style lang="scss">
-@import '@/assets/styles/components/list.scss';
+@import '../assets/styles/components/cardList.scss';
 </style>

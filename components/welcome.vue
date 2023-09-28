@@ -1,50 +1,13 @@
 <script setup>
     import { Splide, SplideSlide } from '@splidejs/vue-splide';
 
-    const slides = ref([
-        {
-            id: 1,
-            url: '/slide1',
-            img: 'welcome/slide1.jpg',
-            title: 'Приют для собак «Хаёт»',
-            info: 'Дарим шанс на жизнь! Спасаем, лечим, содержим, пристраиваем животных, наш принцип No Kill'
-        },
-        {
-            id: 2,
-            url: '/slide2',
-            img: 'welcome/slide1.jpg',
-            title: 'Приют для собак «Хаёт»',
-            info: 'Дарим шанс на жизнь! Спасаем, лечим, содержим, пристраиваем животных, наш принцип No Kill'
-        },
-    ])
-    
-    const list = ref([
-        {
-            id: 1,
-            url: '/',
-            img: 'welcome/dog.png',
-            title: 'Пристроили Бакса. Пса благополучно встретили в Москве.',
-            date: '11 июля'
-        },
-        {
-            id: 2,
-            url: '/',
-            img: 'welcome/dog2.png',
-            title: 'Очередной спасёныш. Собака с Янгибазара. Сбор на лечение.',
-            date: '14 июля'
-        },
-        {
-            id: 3,
-            url: '/',
-            img: 'welcome/dog3.png',
-            title: 'Узбекистан: обращение с бездомными животными требует гуманизации',
-            date: '24 июля'
-        },
-    ])
+    defineProps({
+        welcome: Object
+    })
 </script>
 
 <template>
-    <div class="welcome">
+    <div :class="welcome?.alt ? 'welcome alt' : 'welcome'">
         <div class="welcome__top">
             <div class="welcome__slider">
                 <Splide 
@@ -65,7 +28,7 @@
                     }" 
                 >
                     <SplideSlide class="splide__slide slideWrap__slide"
-                        v-for="item of slides" :key="item?.id"
+                        v-for="item of welcome?.slides" :key="item?.id"
                     >
                         <img :src="`/${item?.img}`" class="slideWrap__img">
 
@@ -81,22 +44,7 @@
 
         <div class="welcome__bot">
             <div class="welcome__container">
-                <ul class="welcome__list">
-                    <li class="item" v-for="item of list" :key="item?.id">
-                        <div class="item__box">
-                            <NuxtLink :to="item?.url" class="item__left">
-                                <div class="item__img">
-                                    <img :src="`/${item?.img}`">
-                                </div>
-                            </NuxtLink>
-                            <div class="item__right">
-                                <div class="item__date">{{ item?.date }}</div>
-
-                                <NuxtLink :to="item?.url" class="item__title">{{ item?.title }}</NuxtLink>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                
             </div>
         </div>
     </div>

@@ -69,7 +69,8 @@
             display: flex;
             background: #fff;
             border-radius: 50px;
-            border: 1px solid #B2B2B2;
+            // border: 1px solid #B2B2B2;
+            @include tr(.2s);
         }
         .search-box-input{
             width: 0px;
@@ -79,7 +80,7 @@
         }
         .search-box-btn{
             display: flex;
-            border-radius: 50%;
+            // border-radius: 50%;
             width: 50px;
             height: 50px;
             background: white;
@@ -92,7 +93,7 @@
             display: flex;
         }
         .search-box-input::placeholder{
-            color: white;
+            color: #000;
             opacity: .7;
         }
         .search-box:hover .search-box-input{
@@ -132,6 +133,16 @@
             img{
                 width: 60px;
                 height: 60px;
+            }
+        }
+        .header__search{
+            .search-box{
+                display: flex;
+                background: 0;
+                border-color: #000;
+            }
+            .search-box-btn{
+                background: 0;
             }
         }
         // .header__nav{

@@ -1,8 +1,10 @@
 <script setup>
     import { storeToRefs } from "pinia";
     import { useMainStore } from "~/store/main";
+    import { useSearchStore } from "~/store/search";
     
     const mainStore = useMainStore()
+    const searchStore = useSearchStore()
     const { cats }  = storeToRefs(mainStore)
 
     const { locale, locales, setLocale } = useI18n()
@@ -31,6 +33,9 @@
         };
     }
     
+    function openSearch() {
+        searchStore.searchChange()
+    }
 </script>
 
 <template>
@@ -53,12 +58,12 @@
                     </li>
                 </ul>
             </div>
-
+            
             <div class="header__right">
                 <div class="header__search">
                     <div class="search-box">
-                        <input type="text" class="search-box-input" placeholder="What are you looking for ?">
-                        <button class="search-box-btn">
+                        <!-- <input type="text" class="search-box-input" placeholder="Что ищете?"> -->
+                        <button class="search-box-btn" @click="openSearch">
                             <div class="search-box-icon">
                                 <img src="/logo/search.svg">
                             </div>
@@ -67,8 +72,11 @@
                 </div>
 
                 <div class="header__lang">
-                    <div class="item">Ру</div>
-                    <!-- <a
+                    <!-- <div class="item">{{ locale }}</div> -->
+                    <!-- <ul class="header__lang__list">
+                        <div class="item"></div>
+                    </ul> -->
+                    <a
                         class="item"
                         href="#"
                         v-for="locale in availableLocales"
@@ -76,7 +84,7 @@
                         @click.prevent.stop="setLocale(locale.code)"
                     >
                         {{ locale.name }}
-                    </a> -->
+                    </a>
                 </div>
                 
                 <div class="header__donate">

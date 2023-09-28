@@ -1,0 +1,48 @@
+@import '../../main.scss';
+
+.cardHelp{
+    &__box{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__img{
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            @include tr(.2s);
+        }
+        &:hover{
+            img{
+                transform: scale(1.05);
+            }
+        }
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    &__title{
+        font-family: 'Object-M';
+        font-size: 28px;
+        line-height: 120%;
+        @include tr(.2s);
+        &:hover{
+            color: $colorOrange;
+        }
+    }
+    &__date{
+        font-family: 'Object-M';
+        font-size: 14px;
+        color: #999999;
+        line-height: 160%;
+    }
+    &__info{
+        @include oh(4);
+        font-size: 18px;
+        line-height: 135%;
+    }
+}

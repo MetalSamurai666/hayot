@@ -1,0 +1,38 @@
+@import '../main.scss';
+
+.breadcrumbs{
+    &__box{
+        padding: 30px 0px 5px;
+        @include df-aic-jcc;
+    }
+    &__list{
+        @include df-aic;
+        gap: 34px;
+        .item{
+            &__link{
+                font-family: 'Object-M';
+                font-size: 18px;
+                color: rgba(0, 0, 0, 0.452);
+                position: relative;
+                &::after{
+                    content: '/';
+                    position: absolute;
+                    bottom: 0;
+                    right: -18px;
+                    pointer-events: none;
+                }
+            }
+            &:last-child{
+                .item__link{
+                    &::after{
+                        content: '';
+                        display: none;
+                    }
+                }
+            }
+            .router-link-active.router-link-exact-active{
+                color: $colorOrange;
+            } 
+        }
+    }
+}

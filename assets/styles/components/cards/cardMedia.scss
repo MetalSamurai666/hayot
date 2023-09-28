@@ -1,0 +1,47 @@
+@import '../../main.scss';
+
+.cardMedia{
+    &__box{
+        background-color: $colorOrange;
+        border-radius: 25px;
+        overflow: hidden;
+    }
+    &__img{
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 285px;
+            object-position: center;
+            object-fit: cover;
+            @include tr(.2s);
+        }
+        &:hover{
+            img{
+                transform: scale(1.05);
+            }
+        }
+    }
+    &__text{
+        padding: 20px 20px 50px;
+        *{
+            color: #fff;
+        }
+    }
+    &__date{
+        opacity: 0.7;
+        font-size: 17px;
+    }
+    &__title{
+        font-family: 'Object-M';
+        font-size: 20px;
+        line-height: 120%;
+        margin-top: 10px;
+        @include oh(3);
+        @include tr(.2s);
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+}

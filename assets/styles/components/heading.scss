@@ -1,0 +1,20 @@
+@import '../main.scss';
+
+.heading{
+    &__box{
+        @include df-aic;
+        flex-direction: column;
+        padding: 10px 0px 20px;
+        gap: 15px;
+    }
+    &__title{
+        font-family: 'Object-B';
+        font-size: 55px;
+    }
+    &__info{
+        font-family: 'Object-M';
+        font-size: 24px;
+        text-align: center;
+        line-height: 120%;
+    }
+}

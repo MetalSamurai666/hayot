@@ -61,55 +61,40 @@
             }
         }
     }
+    &.alt{
+        .welcome__slider{
+            .slideWrap{
+                &__box{
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding-bottom: 60px;
+                    text-align: center;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(0deg, #201e1fa8 0%, rgba(32, 30, 31, 0.00) 100%);
+                        z-index: 2;
+                    }
+                }
+                &__title{
+                    max-width: 1000px;
+                    z-index: 3;
+                }
+                &__info{
+                    max-width: 650px;
+                    z-index: 3;
+                }
+            }
+        }
+    }
     // &__bot{
     //     position: absolute;
     //     bottom: 0;
     //     left: 0;
     // }
-    &__list{
-        padding: 5px;
-        display: flex;
-        gap: 20px;
-        .item{
-            flex-basis: 33.3333%;
-            width: 33.3333%;
-            &__box{
-                display: flex;
-                gap: 10px;
-            }
-            &__img{
-                border-radius: 10px;
-                object-fit: cover;
-                object-position: center;
-                width: 205px;
-                height: 140px;
-                overflow: hidden;
-                img{
-                    @include tr(.2s);
-                }
-                &:hover{
-                    img{
-                        transform: scale(1.05);
-                    }
-                }
-            }
-            &__right{
-                padding: 5px 0px;
-                *{
-                    font-size: 18px;
-                    line-height: 120%;
-                }
-            }
-            &__date{
-                font-family: 'Object-B';
-            }
-            &__title{
-                @include oh(4);
-                @include tr(.2s);
-                &:hover{
-                    color: $colorOrange;
-                }
-            }
-        }
-    }
 }

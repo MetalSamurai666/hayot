@@ -10,7 +10,7 @@
                         В 2023 мы спасли уже 
                     </div>
                     <div class="support__title big">
-                        1000+ собак 
+                        1000+ <br> собак 
                     </div>
                     <div class="support__title little">
                         С вами сможем больше!

@@ -5,6 +5,7 @@
 <template>
   <div>
     <Header />
+    <Search />
     <slot />
 
     <Footer />

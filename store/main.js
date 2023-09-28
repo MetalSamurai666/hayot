@@ -19,7 +19,7 @@ export const useMainStore = defineStore('mainId', () => {
         },
         {
             id: 4,
-            url: '/',
+            url: '/helpful',
             title: 'Полезно знать'
         },
         {

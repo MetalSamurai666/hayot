@@ -1,0 +1,18 @@
+@import '../main.scss';
+
+.cardList{
+    &__filter{
+        @include df-aic;
+        gap: 20px;
+        .item{
+            &__box{
+                background-color: #fff;
+                padding: 15px;
+                border-radius: 25px;
+            }
+        }
+    }
+    &__masonry{
+        padding: 40px 0px;
+    }
+}

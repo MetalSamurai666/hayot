@@ -1,0 +1,34 @@
+@import '../main.scss';
+
+.useful{
+    background-color: #000;
+    *{
+        color: #fff;
+    }
+    &__box{
+        padding: 15px 0px;
+    }
+    &__list{
+        @include df-jcsb;
+        gap: 15px;
+        .item{
+            height: 250px;
+            flex-basis: 20%;
+            width: 20%;
+            &__link{
+                width: 100%;
+                height: 100%;
+            }
+            &__box{
+                height: 100%;
+                @include df-aic-jcc;
+                flex-direction: column;
+                @include tr(.3s);
+                border-radius: 10px;
+                &:hover{
+                    background-color: rgb(255, 255, 255, 0.10);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+@import '../main.scss';
+
+.actual{
+    &__box{
+        padding: 20px 0px;
+    }
+    &__list{
+        padding: 5px;
+        display: flex;
+        gap: 20px;
+        .item{
+            flex-basis: 33.3333%;
+            width: 33.3333%;
+            &__box{
+                display: flex;
+                gap: 10px;
+            }
+            &__img{
+                border-radius: 10px;
+                object-fit: cover;
+                object-position: center;
+                width: 205px;
+                height: 140px;
+                overflow: hidden;
+                img{
+                    @include tr(.2s);
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+            &__right{
+                padding: 5px 0px;
+                *{
+                    font-size: 18px;
+                    line-height: 120%;
+                }
+            }
+            &__date{
+                font-family: 'Object-B';
+            }
+            &__title{
+                @include oh(4);
+                @include tr(.2s);
+                &:hover{
+                    color: $colorOrange;
+                }
+            }
+        }
+    }
+}
