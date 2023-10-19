@@ -175,11 +175,135 @@
                                 </li>
                             </ul>
                         </li>
+
+                        <li class="item">
+                            <div class="item__title">Личные данные</div>
+                            
+                            <ul class="item__list">
+                                <li class="subItem checkbox">
+                                    <div class="subItem__box">
+                                        <label class="subItem__label">
+                                            <input type="checkbox" checked="checked">
+                                            <div class="subItem__check">
+                                                <span></span>
+                                            </div>
+                                            <div class="subItem__title">Соглашаюсь с <NuxtLink to="/">офертой</NuxtLink></div>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="subItem checkbox">
+                                    <div class="subItem__box">
+                                        <label class="subItem__label">
+                                            <input type="checkbox">
+                                            <div class="subItem__check">
+                                                <span></span>
+                                            </div>
+                                            <div class="subItem__title">Соглашаюсь на обработку моих <NuxtLink to="/">персональных данных</NuxtLink></div>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
+
+                    <div class="donateInfo__btn">
+                        <button>Пожертвовать</button>
+                    </div>
                 </div>
                 
                 <div class="donateInfo__bot">
+                    <ul class="donateInfo__cards">
+                        <li class="item uzum">
+                            <a href="https://uzumbank.uz" target="_blank" class="item__box">
+                                <div class="item__img">
+                                    <img src="/payment/uzum.webp">
+                                </div>
 
+                                <div class="item__title">
+                                    Как перевести средства приюту Хаёт с приложении Uzum Bank
+                                </div>
+
+                                <div class="item__info">
+                                    uzumbank.uz
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item click">
+                            <a href="https://click.uz" target="_blank" class="item__box">
+                                <div class="item__img">
+                                    <img src="/payment/click.png">
+                                </div>
+
+                                <div class="item__title">
+                                    Регулярные платежи приюту Хаёт с Click
+                                </div>
+
+                                <div class="item__info">
+                                    click.uz
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item payme">
+                            <a href="https://payme.uz" target="_blank" class="item__box">
+                                <div class="item__img">
+                                    <img src="/payment/payme.png">
+                                </div>
+
+                                <div class="item__title">
+                                    Пожертвование Хаёту в Payme
+                                </div>
+
+                                <div class="item__info">
+                                    payme.uz
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item paynet">
+                            <a href="https://paynet.uz" target="_blank" class="item__box">
+                                <div class="item__img">
+                                    <img src="/payment/paynet.png">
+                                </div>
+
+                                <div class="item__title">
+                                    Как перевести средства приюту Хаёт в терминале Paynet
+                                </div>
+
+                                <div class="item__info">
+                                    paynet.uz
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item paysend">
+                            <a href="https://paysend.com" target="_blank" class="item__box">
+                                <div class="item__img">
+                                    <img src="/payment/paysend.png">
+                                </div>
+
+                                <div class="item__title">
+                                    Как перевести средства приюту Хаёт из любой точки мира через Paysend
+                                </div>
+
+                                <div class="item__info">
+                                    paysend.com
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item kapital">
+                            <a href="https://kapitalbank.uz" target="_blank" class="item__box">
+                                <div class="item__img">
+                                    <img src="/payment/kapitalbank.png">
+                                </div>
+
+                                <div class="item__title">
+                                    Как перевести средства приюту Хаёт в терминале Капиталбанка
+                                </div>
+
+                                <div class="item__info">
+                                    kapitalbank.uz
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

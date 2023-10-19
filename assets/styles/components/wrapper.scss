@@ -5,7 +5,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 800px;
+        height: calc(100vh - 70px);
         position: relative;
         color: #fff;
         &::after{
@@ -43,5 +43,40 @@
         font-size: 24px;
         max-width: 1200px;
         text-align: center;
+    }
+    &__btn{
+        margin-top: 35px;
+        a{
+            border-radius: 200px;
+            background: rgba(255, 255, 255, 0.30);
+            backdrop-filter: blur(15px);
+            padding: 15px 30px;
+            color: #fff;
+            font-family: 'Object-M';
+            font-size: 24px;
+            line-height: 120%;
+            @include tr(.2s);
+            &:hover{
+                background-color: #fff;
+                backdrop-filter: blur(0px);
+                color: #000;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        &__box{
+            height: 400px;
+        }
+        &__text{
+            padding: 0px 10px 20px;
+        }
+        &__title{
+            font-size: 28px;
+            margin: 15px 0px;
+        }
+        &__info{
+            font-size: 16px;
+        }
     }
 }

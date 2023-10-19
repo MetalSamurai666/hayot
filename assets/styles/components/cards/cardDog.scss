@@ -2,13 +2,14 @@
 
 .cardDog{
     height: 100%;
+    
     &__box{
         display: flex;
         flex-direction: column;
         height: 100%;
         border-radius: 15px;
         overflow: hidden;
-        box-shadow: 0px 2px 2px #0000007a;
+        box-shadow: 0px 1px 2px #0000007a;
         @include tr(.2s);
         &:hover{
             box-shadow: 0px 0px 1px #0000007a;

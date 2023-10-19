@@ -11,6 +11,9 @@
                 <div class="wrapper__subtitle">{{ wrapper?.subtitle }}</div>
                 <div class="wrapper__title">{{ wrapper?.title }}</div>
                 <div class="wrapper__info">{{ wrapper?.info }}</div>
+                <div class="wrapper__btn" v-if="wrapper?.btn">
+                    <NuxtLink :to="wrapper?.btn?.url">{{ wrapper?.btn?.title }}</NuxtLink>
+                </div>
             </div>
         </div>
     </div>

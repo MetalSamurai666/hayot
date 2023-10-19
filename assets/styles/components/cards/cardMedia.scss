@@ -44,4 +44,28 @@
             opacity: 0.9;
         }
     }
+
+    @media (max-width: 1024px) {
+        &__img{
+            img{
+                height: 180px;
+            }
+        }
+        &__text{
+            padding: 15px 15px 30px;
+        }
+        &__date{
+            font-size: 14px;
+        }
+        &__title{
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        &__text{
+            padding: 15px 15px 20px;
+        }
+        
+    }
 }

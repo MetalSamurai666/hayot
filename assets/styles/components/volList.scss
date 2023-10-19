@@ -1,0 +1,46 @@
+@import '../main.scss';
+
+.volList{
+    &__box{
+        padding: 50px 0px;
+    }
+    &__head{
+        display: flex;
+        justify-content: center;
+    }
+    &__info{
+        max-width: 830px;
+        font-size: 18px;
+        line-height: 160%;
+        text-align: justify;
+    }
+    &__list{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 35px;
+        .item{
+            height: 500px;
+        }
+    }
+    &__more{
+        @include df-aic-jcc;
+        a{
+            background-color: #000;
+            color: #fff;
+            padding: 25px 30px;
+            border-radius: 40px;
+            span{
+                color: #898989;
+                @include tr(.2s);
+            }
+            @include tr(.2s);
+            &:hover{
+                background-color: $colorOrange;
+                span{
+                    color: #000;
+                }
+            }
+        }
+    }
+}

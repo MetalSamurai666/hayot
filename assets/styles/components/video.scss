@@ -1,0 +1,25 @@
+@import '../main.scss';
+
+.video{
+    &__box{
+        height: 850px;
+    }
+
+    @media (max-width: 1440px) {
+        &__box{
+            height: 650px;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        &__box{
+            height: 600px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        &__box{
+            height: 500px;
+        }
+    }
+}

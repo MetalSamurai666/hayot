@@ -1,9 +1,11 @@
 <script setup>
     import { storeToRefs } from "pinia";
     import { useMainStore } from "~/store/main";
+    import { useMenuStore } from '@/store/menu';
     import { useSearchStore } from "~/store/search";
     
     const mainStore = useMainStore()
+    const menuStore = useMenuStore()
     const searchStore = useSearchStore()
     const { cats }  = storeToRefs(mainStore)
 
@@ -11,6 +13,10 @@
 
     const availableLocales = computed(() => {
         return (locales.value).filter(i => i.code !== locale.value)
+    })
+
+    const currentLocale = computed(() => {
+        return (locales.value).filter(i => i.code == locale.value)[0]
     })
 
     /* Header transition on scroll */
@@ -32,9 +38,20 @@
             }
         };
     }
+
+    function openMenu() {
+        menuStore.menuChange()
+    }
     
     function openSearch() {
         searchStore.searchChange()
+    }
+
+
+    const langState = ref(false)
+    function openLang() {
+        console.log('opening lang///')
+        langState.value = !langState.value
     }
 </script>
 
@@ -71,25 +88,39 @@
                     </div>
                 </div>
 
-                <div class="header__lang">
-                    <!-- <div class="item">{{ locale }}</div> -->
-                    <!-- <ul class="header__lang__list">
-                        <div class="item"></div>
-                    </ul> -->
-                    <a
-                        class="item"
-                        href="#"
-                        v-for="locale in availableLocales"
-                        :key="locale.code"
-                        @click.prevent.stop="setLocale(locale.code)"
-                    >
-                        {{ locale.name }}
-                    </a>
+                <div 
+                    :class="langState ? 'header__omen active' : 'header__omen'"
+                >
+                    <div class="header__omen__box">
+                        <div class="header__omen__current" @click="openLang">
+                            {{ currentLocale?.name }}
+                        </div>
+
+                        <ul class="header__omen__list">
+                            <li class="item" 
+                                v-for="locale in availableLocales"
+                                :key="locale.code"
+                                
+                            >
+                                <button @click="setLocale(locale.code), openLang()">
+                                    {{ locale.name }}
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="header__donate">
-                    <NuxtLink to="/">{{ $t('support') }}</NuxtLink>
+                    <NuxtLink to="/donate">{{ $t('support') }}</NuxtLink>
                 </div>
+
+                
+            </div>
+
+            <div class="header__menu">
+                <button @click="openMenu">
+                    <img src="/logo/menu.svg">
+                </button>
             </div>
         </div>
     </header>

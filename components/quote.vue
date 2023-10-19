@@ -8,6 +8,7 @@
                 <div class="quote__img">
                     <img src="/quote/image.jpg">
                 </div>
+                <div class="quote__gradient"></div>
             </div>
 
             <div class="quote__right">
@@ -16,12 +17,16 @@
                         <div class="quote__name">Ирода Маткаримова</div>
                         <div class="quote__cat">Основатель и руководитель приюта Хаёт</div>
                     </div>
-                    <div class="quote__logo top">
-                        <img src="/logo/quote.svg">
-                    </div>
                 </div>
                 
                 <div class="quote__mid">
+                    <div class="quote__logo top">
+                        <img src="/logo/quote.svg">
+                    </div>
+
+                    <div class="quote__logo bot">
+                        <img src="/logo/quote.svg">
+                    </div>
                     <div class="quote__info">
                         <p>Друзья, вот уже больше 10 лет я посвятила зоозащите, 3 года из которых отдано приюту Хаёт. Это наше общее детище, место, с которого начинается новая история Узбекистана, страны с гуманным толерантным  отношением к животным. Совместные усилия в любом деле — залог успешного исхода. Помогайте нам, вместе мы воплотим мечту о стране, где животных любят и относятся к ним по-человечески.</p>
                     </div>
@@ -30,10 +35,6 @@
                 <div class="quote__bot">
                     <div class="quote__btn">
                         <NuxtLink to="/">Поддержать Хаёт</NuxtLink>
-                    </div>
-
-                    <div class="quote__logo bot">
-                        <img src="/logo/quote.svg">
                     </div>
                 </div>
             </div>

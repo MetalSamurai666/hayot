@@ -4,6 +4,7 @@
     &__box{
         display: flex;
         flex-direction: column;
+        padding: 50px 0px 70px;
     }
     /* Top Section */
     &__top{
@@ -141,6 +142,140 @@
                             }
                         }
                     }
+                    &.checkbox{
+                        position: relative;
+                        .subItem__box{
+                            padding: 7.5px 0px;
+                        }
+                        .subItem__label{
+                            @include df-aic;
+                        }
+                        .subItem__check{
+                            border: 1px solid #C4C4C4;
+                            border-radius: 5px;
+                            border-radius: 5px;
+                            width: 25px;
+                            height: 25px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            @include tr(.2s);
+                            span{
+                                display: block;
+                                width: 5px;
+                                height: 12px;
+                                border: solid #000;
+                                border-width: 0 2px 2px 0;
+                                -webkit-transform: rotate(45deg);
+                                -ms-transform: rotate(45deg);
+                                transform: rotate(45deg);
+                                @include tr(.2s);
+                            }
+                        }
+                        .subItem__title{
+                            padding-left: 10px;
+                            color: #A5A5A5;
+                            font-size: 21px;
+                            line-height: 130%;
+                            a{
+                                color: #000;
+                            }
+                        }
+                        input{
+                            &:checked ~ .subItem__check{
+                                background-color: $colorOrange;
+                                border-color: $colorOrange;
+                                span{
+                                    border-color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__btn{
+        margin-top: 50px;
+        @include df-aic-jcc;
+        width: 100%;
+        button{
+            color: #221414;
+            text-align: center;
+            font-family: 'Object-M';
+            font-size: 25px;
+            width: 450px;
+            height: 80px;
+            border-radius: 150px;
+            background-color: $colorOrange;
+            color: #fff;
+        }
+    }
+    /* Bottom Section */
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        gap: 25px;
+        .item{
+            *{
+                color: #fff;
+            }
+            &__box{
+                background-color: $colorOrange;
+                border-radius: 25px;
+                padding: 50px 50px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            &__img{
+                background-color: #fff;
+                border-radius: 25px;
+                width: 100%;
+                height: 300px;
+                padding: 20px;
+                @include df-aic-jcc;
+                img{
+                    width: 100%;
+                }
+            }
+            &__title{
+                font-size: 26px;
+                line-height: 120%;
+                margin: 50px 0px 30px;
+            }
+            &__info{
+                margin-top: auto;
+            }
+            &.uzum{
+                .item__box{
+                    background-color: #7000ff;
+                }
+            }
+            &.click{
+                .item__box{
+                    background-color: #53b7d1;
+                }
+            }
+            &.payme{
+                .item__box{
+                    background-color: #33cbcb;
+                }
+            }
+            &.paysend{
+                .item__box{
+                    background-color: #7633ff;
+                }
+            }
+            &.paynet{
+                .item__box{
+                    background-color: #20cc6d;
+                }
+            }
+            &.kapital{
+                .item__box{
+                    background-color: #fbc200;
                 }
             }
         }

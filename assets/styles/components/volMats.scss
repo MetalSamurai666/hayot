@@ -1,0 +1,61 @@
+@import '../main.scss';
+
+.volMats{
+    &__box{
+        padding: 100px 0px;
+        // background-color: #F1F1F1;
+    }
+    &__title{
+        color: #000;
+        text-align: center;
+        font-family: 'Object-M';
+        font-size: 48px;
+        line-height: 90%;
+    }
+    &__body{
+        margin-top: 50px;
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        .item{
+            width: 700px;
+            &__box{
+                @include df-aic-jcsb;
+                width: 100%;
+                height: 100%;
+                border: 2px solid #B3B3B3;
+                border-radius: 110px;
+                padding: 30px;
+            }
+            &__title{
+                font-family: 'Object-M';
+                font-size: 27px;
+            }
+            &__arrow{
+                width: 45px;
+                height: 45px;
+                border: 2px solid #B3B3B3;
+                border-radius: 50%;
+                @include df-aic-jcc;
+                @include tr(.2s);
+                svg{
+                    @include tr(.2s);
+                }
+            }
+            &:hover{
+                .item__arrow{
+                    background-color: #B3B3B3;
+                    svg{
+                        transform: translate(1px, -1px);
+                        path{
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import '../main.scss';
+
+.volHelp{
+    background-color: #000;
+    *{
+        color: #fff;
+    }
+    &__box{
+        padding: 130px 0px 170px;
+    }
+    &__title{
+        color: #FFF;
+        text-align: center;
+        font-family: 'Object-M';
+        font-size: 72px;
+        line-height: 90%;
+        max-width: 80%;
+        margin: auto;
+    }
+    &__list{
+        display: flex;
+        gap: 40px;
+        margin-top: 50px;
+        .item{
+            flex-basis: 33.3333%;
+            width: 33.3333%;
+            &__title{
+                font-family: 'Object-M';
+                font-size: 30px;
+                line-height: 120%;
+            }
+            &__list{
+                margin-top: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    }
+    &__all{
+        margin-top: 150px;
+        @include df-aic-jcc;
+        a{
+            padding: 25px 30px;
+            border: 2px solid #fff;
+            border-radius: 40px;
+            font-family: 'Object-M';
+            font-size: 24px;
+            @include tr(.2s);
+            &:hover{
+                background-color: #fff;
+                color: #000;
+            }
+        }
+    }
+}

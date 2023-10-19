@@ -49,4 +49,34 @@
             }
         }
     }
+
+    @media (max-width: 500px) {
+        &__box{
+            padding: 20px 0px;
+        }
+        &__head{
+            padding: 0;
+        }
+        &__title{
+            line-height: 130%;
+            font-size: 24px;
+        }
+        &__btns{
+            margin: 20px 0px 15px;
+            justify-content: flex-start;
+            .item{
+                flex-basis: 50%;
+                width: 50%;
+                button{
+                    width: 100%;
+                    background-color: #f1f1f1;
+                    box-shadow: unset;
+                    &:hover{
+                        box-shadow: unset;
+                        background-color: #e7e7e7;
+                    }
+                }
+            }
+        }
+    }
 }

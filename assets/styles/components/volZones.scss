@@ -1,0 +1,103 @@
+@import '../main.scss';
+
+.volZones{
+    background-color: #fff;
+    &__box{
+        padding: 100px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+    }
+    &__top{
+        @include df-aic-jcc;
+    }
+    &__title{
+        text-align: center;
+        font-family: 'Object-M';
+        font-size: 48px;
+        line-height: 90%;
+        max-width: 60%;
+    }
+    &__filter{
+        @include df-aic-jcc;
+        gap: 5px;
+        .item{
+            &__box{
+                font-family: 'Object-B';
+                font-size: 18px;
+                line-height: 125%;
+                padding: 20px 25px;
+                border-radius: 200px;
+                background-color: #ccc;
+                @include tr(.2s);
+            }
+            &.green{
+                .item__box{
+                    background-color: #bdff9d;
+                    &:hover{
+                        background-color: darken(#bdff9d, 10%);
+                    }
+                }
+            }
+            &.yellow{
+                .item__box{
+                    background-color: #FFEDBE;
+                    &:hover{
+                        background-color: darken(#FFEDBE, 10%);
+                    }
+                }
+            }
+            &.red{
+                .item__box{
+                    background-color: #FFDCDC;
+                    &:hover{
+                        background-color: darken(#FFDCDC, 10%);
+                    }
+                }
+            }
+        }
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        .item{
+            &__box{
+                padding: 15px;
+                border-radius: 15px;
+                *{
+                    color: #2C2521;
+                    font-size: 18px;
+                    line-height: 125%;
+                }
+            }
+            &__title{
+                font-family: 'Object-B';
+            }
+            &__info{
+                margin: 5px 0px;
+            }
+            &__more{
+                color: $colorOrange;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            &.closed{
+                .item__box{
+                    background-color: #bdff9d;
+                }
+            }
+            &.almost{
+                .item__box{
+                    background-color: #FFEDBE;
+                }
+            }
+            &.open{
+                .item__box{
+                    background-color: #FFDCDC;
+                }
+            }
+        }
+    }
+}

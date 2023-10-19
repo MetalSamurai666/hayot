@@ -46,7 +46,7 @@
                     height: 100%;
                     background-color: $colorOrange;
                     top: 45px;
-                    left: -22.5px;
+                    left: -23.5px;
                     z-index: 2;
                 }
             }
@@ -63,6 +63,43 @@
                 .item__right{
                     &::after{
                         display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        &__box{
+            padding: 20px 0px;
+        }
+        &__title{
+            font-size: 24px;
+        }
+        &__info{
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        &__list{
+            margin-top: 20px;
+            .item{
+                padding-bottom: 15px;
+                &__index{
+                    font-size: 18px;
+                    width: 35px;
+                    height: 35px;
+                }
+                &__title{
+                    font-size: 18px;
+                }
+                &__info{
+                    font-size: 15px;
+                }
+                &__right{
+                    padding-left: 10px;
+                    &::after{
+                        top: 35px;
+                        left: -19.5px;
                     }
                 }
             }

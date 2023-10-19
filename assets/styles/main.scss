@@ -23,11 +23,14 @@
 /* Main Settings */
 /* ========================================================================== */
 body{
-    background: #F2F2F2;
+    // background: #F2F2F2;
     font-size: 18px;
     color: #000;
     &.noscroll{
         overflow-y: hidden;
+    }
+    @media (max-width: 1440px) {
+        font-size: 16px;
     }
 }
 
@@ -76,7 +79,7 @@ body{
     }
     @media (max-width: 500px) {
         max-width: 100%;
-        padding: 0px 20px;
+        padding: 0px 10px;
     }
 }
 
@@ -85,6 +88,9 @@ body{
     width: 100%;
     margin: auto;
     padding: 0px 50px;
+    @media (max-width: 500px) {
+        padding: 0px 10px;
+    }
 }
 
 // .page{

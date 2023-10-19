@@ -4,7 +4,7 @@ export const useMainStore = defineStore('mainId', () => {
     const cats = ref([
         {
             id: 1,
-            url: 'dogs',
+            url: '/dogs',
             title: 'Возьми собаку'
         },
         {

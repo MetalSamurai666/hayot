@@ -170,7 +170,7 @@
                         <li class="item date">
                             <button>
                                 <div class="item__img">
-                                    <img src="/logo/calendar.svg">
+                                    <img src="/logo/sortList.svg">
                                 </div>
                                 <span class="item__title">По дате</span>
                             </button>

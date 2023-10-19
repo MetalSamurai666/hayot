@@ -116,6 +116,7 @@
                                     <div class="curator__img">
                                         <img :src="info?.curator?.img">
                                     </div>
+                                    <div class="curator__job">Куратор собаки</div>
                                     <div class="curator__name">{{ info?.curator?.name }}</div>
                                     <div class="curator__contact">
                                         <a :href="info?.curator?.url">Напишите куратору</a>

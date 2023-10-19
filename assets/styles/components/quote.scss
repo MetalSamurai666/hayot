@@ -8,14 +8,19 @@
             color: #E7E7E7;
         }
     }
+    &__gradient{
+        display: none;
+    }
     &__left{
         flex-basis: 40%;
         width: 40%;
     }
     &__img{
+        display: flex;
+        height: 100%;
         img{
             width: 100%;
-            height: 700px;
+            height: 100%;
             object-fit: cover;
             object-position: center;
         }
@@ -25,7 +30,8 @@
         width: 60%;
         padding: 50px 60px;
         display: flex;
-        flex-direction: column
+        flex-direction: column;
+        position: relative;
     }
     &__top{
         @include df-aic-jcsb;
@@ -38,6 +44,10 @@
     &__name{
         font-family: 'Object-M';
     }
+    &__mid{
+        padding: 40px 0px;
+        position: relative;
+    }
     &__info{
         margin: 30px 0px 30px;
         p{
@@ -47,6 +57,7 @@
     }
     &__bot{
         @include df-aic-jcsb;
+        margin-top: auto;
     }
     &__btn{
         a{
@@ -66,9 +77,111 @@
     }
     &__logo{
         display: flex;
+        position: absolute;
+        right: 0;
+        &.top{
+            top: -110px;
+        }
         &.bot{
+            bottom: -110px;
             img{
                 transform: rotate(180deg);
+            }
+        }
+    }
+
+
+
+    @media (max-width: 1024px) {
+        &__img{
+            height: 100%;
+            img{
+                height: 100%;
+            }
+        }
+        &__right{
+            padding: 40px;
+        }
+        &__title{
+            max-width: 350px;
+            font-size: 24px;
+        }
+        &__info{
+            p{
+                font-size: 16px;
+            }
+        }
+        &__btn{
+            a{
+                width: 250px;
+                height: 65px;
+                font-size: 20px;
+            }
+        }
+        &__logo{
+            img{
+                width: 70px;
+            }
+            &__top{
+                top: -50px;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        &__box{
+            flex-direction: column;
+        }
+        &__left{
+            position: relative;
+        }
+        &__gradient{
+            display: block;
+            background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(52,52,52,0.8281687675070029) 85%, rgba(52,52,52,1) 100%);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+        &__left, &__right{
+            flex-basis: unset;
+            width: 100%;
+        }
+        &__right{
+            transform: translateY(-60px);
+        }
+        &__img{
+            img{
+                height: 500px;
+            }
+        }
+        &__title{
+            max-width: 100%;
+            text-align: center;
+        }
+        &__mid{
+            padding: 0 0 20px;
+        }
+        &__info{
+            text-align: justify;
+        }
+        &__logo{
+            &.top{
+                left: -10px;
+                top: 0;
+            }
+            &.bot{
+                right: -10px;
+                bottom: 20px;
+            }
+        }
+        &__btn{
+            width: 100%;
+            a{
+                width: 100%;
+                height: 65px;
+                font-size: 22px;
             }
         }
     }

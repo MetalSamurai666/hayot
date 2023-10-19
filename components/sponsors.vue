@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="sponsors__bot">
-                    <ul class="sponsors__carousel">
+                    <!-- <ul class="sponsors__carousel">
                         <li class="item">
                             <div class="item__img">
                                 <img src="/sponsors/sponsor1.png">
@@ -44,17 +44,19 @@
                                 <img src="/sponsors/sponsor2.png">
                             </div>
                         </li>
-                        <li class="item">
-                            <div class="item__img">
-                                <img src="/sponsors/sponsor1.png">
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="item__img">
-                                <img src="/sponsors/sponsor2.png">
-                            </div>
-                        </li>
-                    </ul>
+                    </ul> -->
+                    <div class="scroll">
+                        <div class="m-scroll">
+                            <span><img src="/sponsors/sponsor1.png"></span>
+                            <span><img src="/sponsors/sponsor2.png"></span>
+                            <span><img src="/sponsors/sponsor1.png"></span>
+                            <span><img src="/sponsors/sponsor2.png"></span>
+                            <span><img src="/sponsors/sponsor1.png"></span>
+                            <span><img src="/sponsors/sponsor2.png"></span>
+                            <span><img src="/sponsors/sponsor1.png"></span>
+                            <span><img src="/sponsors/sponsor2.png"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

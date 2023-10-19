@@ -25,12 +25,22 @@
     }
 
     function closeSearch() {
+        console.log('close');
         searchStore.searchChange()
     }
+
+    function closeModalLogin() {
+        console.log('esc');
+    }
+
 </script>
 
 <template>
-    <div :class="searchState ? 'search show' : 'search'">
+    <div
+        :class="searchState ? 'search show' : 'search'" 
+        @keydown.esc="closeSearch"
+        tabindex="0"
+    >
         <div class="search__box">
             <div class="search__input">
                 <input type="text" @input="doSearch($event.target.value)">
@@ -58,8 +68,9 @@
             </div>
 
             <div class="search__close">
+                <div class="search__esc">ESC</div>
                 <button @click="closeSearch">
-                    <img src="@/assets/logo/basic/close.svg">
+                    <img src="/logo/closeSearch.svg">
                 </button>
             </div>
         </div>

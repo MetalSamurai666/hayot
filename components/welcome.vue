@@ -24,6 +24,16 @@
                             next  : 'splide__arrow--next slideWrap__next',
                             pagination: 'splide__pagination slideWrap__pagination',
                             page      : 'splide__pagination__page slideWrap__page',
+                        },
+                        breakpoints: {
+                            1024: {
+                                height: 'calc(100vh - 50px)',
+                            },
+                            500: {
+                                height: 450,
+                                pagination: false,
+                                arrows: false
+                            }
                         }
                     }" 
                 >
@@ -37,16 +47,18 @@
 
                             <div class="slideWrap__info">{{ item?.info }}</div>
                         </div>
+
+                        <div class="slideWrap__gradient"></div>
                     </SplideSlide>
                 </Splide>
             </div>
         </div>
 
-        <div class="welcome__bot">
+        <!-- <div class="welcome__bot">
             <div class="welcome__container">
                 
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 

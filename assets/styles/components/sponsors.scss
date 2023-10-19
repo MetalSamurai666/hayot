@@ -3,7 +3,7 @@
 .sponsors{
     padding: 50px 0px;
     &__box{
-        background-color: #F2F2F2;
+        background-color: #E1E1E1;
         border-radius: 25px;
         padding: 90px 0px 60px;
         position: relative;
@@ -42,17 +42,113 @@
         line-height: 130%;
         margin-top: 50px;
     }
-    &__carousel{
-        @include df-aic;
-        gap: 50px;
-        margin-top: 60px;
-        overflow-x: hidden;
-        .item{
-            &__img{
+    // &__carousel{
+    //     @include df-aic;
+    //     gap: 50px;
+    //     margin-top: 60px;
+    //     overflow-x: hidden;
+    //     .item{
+    //         &__img{
+    //             img{
+    //                 width: 350px;
+    //                 filter: brightness(0);
+    //                 opacity: 0.5;
+    //             }
+    //         }
+    //     }
+    // }
+    &__bot{
+        padding-top: 50px;
+        .scroll {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+        }
+        .m-scroll {
+            overflow: hidden;
+            height: 100%;
+            white-space: nowrap;
+            animation: scrollText 15s infinite linear;
+            margin: 0;
+            font-size: 0;
+            display: flex;
+            justify-content: space-between;
+            width: fit-content;
+        }
+        span {
+            display: inline-block;
+            margin: 0;
+            padding: 0px 7px;
+            color: white;
+            img{
+                width: 300px;
+                filter: brightness(0);
+                opacity: 0.5;
+            }
+        }
+        @keyframes scrollText {
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(-25%);
+            }
+        }
+    }
+
+
+
+    @media (max-width: 1024px) {
+        &__box{
+            padding: 60px 0px;
+        }
+        &__title{
+            font-size: 48px;
+        }
+        &__info{
+            font-size: 20px;
+        }
+        &__bot{
+            span{
                 img{
-                    width: 350px;
-                    filter: brightness(0);
-                    opacity: 0.5;
+                    width: 250px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        &__box{
+            padding: 40px 0px;
+        }
+        &__top{
+            padding: 0;
+        }
+        &__title{
+            font-family: 'Object-M';
+            font-family: 44px;
+            line-height: 100%;
+        }
+        &__info{
+            margin-top: 30px;
+            font-size: 16px;
+            padding: 0px 20px;
+        }
+        &__hearts{
+            .item{
+                &:last-child{
+                    top: unset;
+                    bottom: 120px;
+                }
+            }
+        }
+        &__bot{
+            span{
+                img{
+                    width: 200px;
                 }
             }
         }

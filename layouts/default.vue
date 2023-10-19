@@ -6,6 +6,7 @@
   <div>
     <Header />
     <Search />
+    <Menu />
     <slot />
 
     <Footer />

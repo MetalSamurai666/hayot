@@ -1,0 +1,42 @@
+@import '../main.scss';
+
+.volStart{
+    &__box{
+        padding: 40px 0px 100px;
+    }
+    &__heart{
+        background-image: url('/logo/bigheart.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 1000px;
+        @include df-aic-jcc;
+        flex-direction: column;
+    }
+    &__title{
+        color: #FFF;
+        text-align: center;
+        font-family: Object Sans;
+        font-size: 56.999px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 131.074%;
+        max-width: 70%;
+        margin-top: 50px;
+    }
+    &__btn{
+        margin-top: 80px;
+        a{
+            padding: 25px 30px;
+            border: 2px solid #fff;
+            border-radius: 40px;
+            color: #fff;
+            @include tr(.2s);
+            &:hover{
+                background-color: #fff;
+                color: #000;
+            }
+        }
+    }
+}

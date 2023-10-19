@@ -41,6 +41,9 @@
 
                                 <NuxtLink :to="item?.url" class="item__title">{{ item?.title }}</NuxtLink>
                             </div>
+                            <div class="item__arrow">
+                                <img src="/logo/arrowRight.svg">
+                            </div>
                         </div>
                     </li>
                 </ul>
