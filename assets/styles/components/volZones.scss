@@ -20,6 +20,7 @@
     }
     &__filter{
         @include df-aic-jcc;
+        flex-wrap: wrap;
         gap: 5px;
         .item{
             &__box{
@@ -96,6 +97,36 @@
             &.open{
                 .item__box{
                     background-color: #FFDCDC;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__box{
+            padding: 40px 0px;
+            gap: 20px;
+        }
+        &__title{
+            font-size: 34px;
+            max-width: 100%;
+        }
+        &__filter{
+            .item{
+                &__box{
+                    padding: 10px 15px;
+                    font-size: 15px;
+                }
+            }
+        }
+        &__list{
+            grid-template-columns: 1fr;
+            gap: 10px;
+            .item{
+                &__box{
+                    *{
+                        font-size: 15px;
+                    }
                 }
             }
         }

@@ -18,13 +18,11 @@
         margin-top: 50px;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: 35px;
-        .item{
-            height: 500px;
-        }
+        gap: 25px;
     }
     &__more{
         @include df-aic-jcc;
+        margin-top: 30px;
         a{
             background-color: #000;
             color: #fff;
@@ -41,6 +39,31 @@
                     color: #000;
                 }
             }
+        }
+    }
+
+    @media (max-width: 1440px) {
+        &__list{
+            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    @media (max-width: 1024px) {
+        &__list{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    @media (max-width: 768px) {
+        &__list{
+            gap: 15px;
+        }
+    }
+    @media (max-width: 600px) {
+        &__box{
+            padding: 20px 0px;
+        }
+        &__list{
+            grid-template-columns: 1fr 1fr;
         }
     }
 }

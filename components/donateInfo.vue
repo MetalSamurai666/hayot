@@ -165,7 +165,7 @@
                                         </label>
                                     </div>
                                 </li>
-                                <li class="subItem text" style="margin-top: 15px;">
+                                <li class="subItem text last">
                                     <div class="subItem__box">
                                         <label class="subItem__label">
                                             <input type="text" placeholder="Ваш мобильный телефон">
@@ -210,7 +210,9 @@
                         <button>Пожертвовать</button>
                     </div>
                 </div>
-                
+                <!-- ======================================================= -->
+                <!-- Cards -->
+                <!-- ======================================================= -->
                 <div class="donateInfo__bot">
                     <ul class="donateInfo__cards">
                         <li class="item uzum">

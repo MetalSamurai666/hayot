@@ -67,7 +67,6 @@
 </script>
 
 <template>
-    <NuxtLayout>
         <div class="dogSingle">
             <Welcome 
                 :welcome="welcome"
@@ -79,7 +78,6 @@
             <Useful />
             <Comments />
         </div>
-    </NuxtLayout>
 </template>
 
 

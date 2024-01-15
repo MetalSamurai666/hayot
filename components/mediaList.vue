@@ -49,7 +49,7 @@
                                 page      : 'splide__pagination__page slideMedia__page',
                             },
                             breakpoints: {
-                                500: {
+                                600: {
                                     fixedWidth: '90%',
                                     pagination: true,
                                     arrows: false

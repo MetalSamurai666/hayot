@@ -83,7 +83,6 @@
 </script>   
 
 <template>
-    <NuxtLayout>
         <div class="home body">
             <Welcome 
                 :welcome="welcome"
@@ -100,7 +99,6 @@
             <Sponsors />
             <Quote />
         </div>
-    </NuxtLayout>
 </template>
 
 <style lang="scss">

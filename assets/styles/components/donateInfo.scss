@@ -142,6 +142,9 @@
                             }
                         }
                     }
+                    &.last{
+                        margin-top: 15px;
+                    }
                     &.checkbox{
                         position: relative;
                         .subItem__box{
@@ -177,6 +180,7 @@
                             color: #A5A5A5;
                             font-size: 21px;
                             line-height: 130%;
+                            width: fit-content;
                             a{
                                 color: #000;
                             }
@@ -276,6 +280,113 @@
             &.kapital{
                 .item__box{
                     background-color: #fbc200;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__box{
+            padding: 40px 0px;
+        }
+        /* ================================================================== */
+        /* Top */
+        /* ================================================================== */
+        &__top{
+            padding: 20px;
+        }
+        &__title{
+            font-size: 16px;
+            font-family: 'Object-R';
+        }
+        &__archive{
+            font-size: 18px;
+        }
+        /* ================================================================== */
+        /* Middle */
+        /* ================================================================== */
+        &__mid{
+            padding: 20px;
+            margin: 10px 0px 30px;
+        }
+        /* ================================================================== */
+        /* List */
+        &__list{
+            gap: 20px;
+            .item{
+                &__list{
+                    .subItem{
+                        padding: 5px;
+                        &__back{
+                            padding: 15px 0px;
+                            font-size: 18px;
+                        }
+                        &.w50{
+                            width: 100%;
+                            flex-basis: 100%;
+                        }
+                        &.w25{
+                            width: 50%;
+                            flex-basis: 50%;
+                        }
+                        &.w16{
+                            width: 25%;
+                            flex-basis: 25%;
+                        }
+                        &.w33{
+                            width: 100%;
+                            flex-basis: 100%;
+                        }
+                        &.text{
+                            .subItem__label{
+                                input{
+                                    font-size: 18px;
+                                    min-height: 65px;
+                                }
+                            }
+                        }
+                        &.last{
+                            margin-top: 0;
+                        }
+                        &.checkbox{
+                            .subItem__box{
+                                padding: 5px 0px;
+                            }
+                            .subItem__title{
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__btn{
+            margin-top: 30px;
+            button{
+                height: 60px;
+                font-size: 18px;
+            }
+        }
+        /* ================================================================== */
+        /* ================================================================== */
+        /* Cards */
+        /* ================================================================== */
+        &__cards{
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            .item{
+                &__box{
+                    padding: 15px;
+                }
+                &__img{
+                    height: 150px;
+                }
+                &__title{
+                    font-size: 15px;
+                    margin: 10px 0px 15px;
+                }
+                &__info{
+                    font-size: 14px;
                 }
             }
         }

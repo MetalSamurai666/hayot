@@ -6,6 +6,10 @@ export default defineNuxtConfig({
     '@pinia/nuxt', 
     '@nuxtjs/i18n',
   ],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+    // layoutTransition: { name: 'layout', mode: 'out-in' }
+  },
   i18n: {
     defaultLocale: 'ru',
     strategy: 'no_prefix',

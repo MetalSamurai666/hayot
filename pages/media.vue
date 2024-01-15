@@ -87,7 +87,6 @@
 </script>
 
 <template>
-    <NuxtLayout>
         <div class="media">
             <Wrapper
                 :wrapper="wrapper"
@@ -96,7 +95,6 @@
                 :media="media"
             />
         </div>
-    </NuxtLayout>
 </template>
 
 <style>

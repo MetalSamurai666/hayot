@@ -10,4 +10,14 @@
             height: 750px;
         }
     }
+
+    @media (max-width: 600px) {
+        &__list{
+            padding-bottom: 40px;
+            gap: 20px;
+            .item{
+                height: auto;
+            }
+        }
+    }
 }

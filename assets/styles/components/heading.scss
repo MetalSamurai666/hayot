@@ -4,7 +4,7 @@
     &__box{
         @include df-aic;
         flex-direction: column;
-        padding: 20px 0px 20px;
+        padding: 20px 0px;
         gap: 15px;
     }
     &__title{
@@ -16,5 +16,17 @@
         font-size: 24px;
         text-align: center;
         line-height: 120%;
+    }
+
+    @media (max-width: 600px) {
+        &__box{
+            padding: 10px 0px;
+        }
+        &__title{
+            font-size: 28px;
+        }
+        &__info{
+            font-size: 18px;
+        }
     }
 }

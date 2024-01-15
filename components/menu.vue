@@ -90,11 +90,11 @@
                             {{ item.title }}
                         </NuxtLink> -->
 
-                        <span class="item__open"
+                        <!-- <span class="item__open"
                             v-if="item?.parent?.length > 0" 
                             @click="item?.parent ? changeBenefit(index) : null">
                             <img src="/logos/arrow-right.svg">
-                        </span>
+                        </span> -->
 
                         <ul class="item__list" v-if="item?.parent">
                             <li v-for="subItem, index of item?.parent" :key="index">

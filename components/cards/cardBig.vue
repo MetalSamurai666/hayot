@@ -16,7 +16,11 @@
             </div>
 
             <div class="cardBig__right">
-                <div class="cardBig__date">{{ card?.date }}</div>
+                <NuxtLink 
+                    :to="`${router.currentRoute.value.fullPath}/${card?.url}`" class="cardBig__date"
+                >
+                    {{ card?.date }}
+                </NuxtLink>
 
                 <div class="cardBig__count">{{ card?.count }} {{ card?.count?.slice(-1) > 4 ? `собак` : card?.count == 1 ? `собака` : `собаки`}}</div>
 

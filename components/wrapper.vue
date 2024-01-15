@@ -6,7 +6,11 @@
 
 <template>
     <div class="wrapper">
-        <div class="wrapper__box" :style="`background-image: url(${wrapper?.img})`">
+        <div class="wrapper__box">
+            <div class="wrapper__img">
+                <img :src="wrapper?.img">
+            </div>
+
             <div class="wrapper__text">
                 <div class="wrapper__subtitle">{{ wrapper?.subtitle }}</div>
                 <div class="wrapper__title">{{ wrapper?.title }}</div>

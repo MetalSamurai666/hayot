@@ -6,14 +6,12 @@
 </script>
 
 <template>
-    <NuxtLayout>
         <div class="donate">
             <Heading
                 :heading="heading"
             />
             <DonateInfo />
         </div>
-    </NuxtLayout>
 </template>
 
 <style lang="scss">

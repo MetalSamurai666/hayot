@@ -87,4 +87,31 @@
             }
         }
     }
+
+    @media (max-width: 600px) {
+        &__box{
+            flex-direction: column;
+        }
+        &__left, &__right{
+            flex-basis: unset;
+            width: 100%;
+        }
+        &__img{
+            height: 350px;
+        }
+        &__list, &__more{
+            display: none;
+        }
+        &__right{
+            padding: 20px;
+        }
+        &__date, &__count{
+            font-family: 'Object-B';
+            font-size: 24px;
+        }
+        &__text{
+            margin: 15px 0px 0px;
+            font-size: 16px;
+        }
+    }
 }

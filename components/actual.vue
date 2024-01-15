@@ -30,7 +30,7 @@
             <div class="actual__box">
                 <ul class="actual__list">
                     <li class="item" v-for="item of list" :key="item?.id">
-                        <div class="item__box">
+                        <NuxtLink :to="item?.url" class="item__box">
                             <NuxtLink :to="item?.url" class="item__left">
                                 <div class="item__img">
                                     <img :src="`/${item?.img}`">
@@ -44,7 +44,7 @@
                             <div class="item__arrow">
                                 <img src="/logo/arrowRight.svg">
                             </div>
-                        </div>
+                        </NuxtLink>
                     </li>
                 </ul>
             </div>

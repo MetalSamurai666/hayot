@@ -1,6 +1,9 @@
 @import '../main.scss';
 
 .dogsList{
+    .container-lol{
+        padding: 0px 20px;
+    }
     &__box{
         padding: 55px 0px 150px;
     }
@@ -50,7 +53,7 @@
         }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         &__box{
             padding: 20px 0px;
         }

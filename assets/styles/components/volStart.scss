@@ -39,4 +39,31 @@
             }
         }
     }
+
+    @media (max-width: 1024px) {
+        &__heart{
+            height: 600px;
+        }
+        &__title{
+            font-size: 34px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__box{
+            padding: 20px 0px;
+        }
+        &__heart{
+            height: 350px;
+        }
+        &__title{
+            font-size: 18px;
+        }
+        &__btn{
+            margin-top: 15px;
+            a{
+                padding: 10px 15px;
+            }
+        }
+    }
 }

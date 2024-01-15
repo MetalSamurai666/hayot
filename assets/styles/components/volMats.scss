@@ -41,6 +41,7 @@
                 border-radius: 50%;
                 @include df-aic-jcc;
                 @include tr(.2s);
+                margin-left: 10px;
                 svg{
                     @include tr(.2s);
                 }
@@ -54,6 +55,33 @@
                             fill: #fff;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__box{
+            padding: 0px 0px 40px;
+        }
+        &__title{
+            font-size: 34px;
+        }
+        &__body{
+            margin-top: 20px;
+        }
+        &__list{
+            .item{
+                width: 100%;
+                &__box{
+                    padding: 10px;
+                }
+                &__title{
+                    font-size: 16px;
+                }
+                &__arrow{
+                    width: 35px;
+                    height: 35px;
                 }
             }
         }

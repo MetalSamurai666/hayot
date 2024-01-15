@@ -61,7 +61,7 @@
             <div class="header__left">
                 <div class="header__logo">
                     <NuxtLink to="/">
-                        <img src="/logo.png">
+                        <img src="/logo.svg">
                     </NuxtLink>
                 </div>
             </div>

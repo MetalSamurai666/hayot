@@ -2,24 +2,36 @@
 
 .video{
     &__box{
-        height: 850px;
+        height: 720px;
+        position: relative;
+    }
+    &__btn{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: block;
+        width: fit-content;
+        height: fit-content;
     }
 
     @media (max-width: 1440px) {
-        &__box{
-            height: 650px;
-        }
-    }
-
-    @media (max-width: 1280px) {
         &__box{
             height: 600px;
         }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 1280px) {
         &__box{
-            height: 500px;
+            height: 550px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__box{
+            height: 450px;
         }
     }
 }

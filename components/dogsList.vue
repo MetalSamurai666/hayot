@@ -153,7 +153,7 @@
 
 <template>
     <div class="dogsList">
-        <div class="container">
+        <div class="container-lol">
             <div class="dogsList__box">
                 <div class="dogsList__head">
                     <div class="dogsList__title">{{ list?.title }}</div>

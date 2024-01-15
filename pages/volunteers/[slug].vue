@@ -12,13 +12,11 @@
 </script>
 
 <template>
-    <NuxtLayout>
         <div class="vol">
             <Wrapper
                 :wrapper="wrapper"
             />
         </div>
-    </NuxtLayout>
 </template>
 
 <style>

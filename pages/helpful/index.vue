@@ -6,14 +6,12 @@
 </script>
 
 <template>
-    <NuxtLayout>
         <div class="helpful">
             <Wrapper
                 :wrapper="wrapper"
             />
             <HelpList />
         </div>
-    </NuxtLayout> 
 </template>
 
 <style>

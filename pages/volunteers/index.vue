@@ -52,7 +52,7 @@
 </script>
 
 <template>
-    <NuxtLayout>
+    
         <div class="volunteers">
             <Wrapper
                 :wrapper="wrapper"
@@ -65,7 +65,7 @@
             <VolZones/>
             <VolMats/>
         </div>
-    </NuxtLayout>
+    
 </template>
 
 <style>

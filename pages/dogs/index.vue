@@ -32,7 +32,6 @@
 </script>
 
 <template>
-    <NuxtLayout>
         <div class="dogs body">
             <Wrapper
                 :wrapper="wrapper"
@@ -44,7 +43,6 @@
                 :list="list"
             />
         </div>
-    </NuxtLayout>
 </template>
 
 <style>

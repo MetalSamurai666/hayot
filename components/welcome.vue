@@ -16,7 +16,7 @@
                         cover: true,
                         autoplay: true,
                         interval: 3000,
-                        height: 'calc(100vh - 70px)',
+                        // height: 'calc(100vh - 70px)',
                         classes: {
                             arrows: 'splide__arrows slideWrap__arrows',
                             arrow : 'splide__arrow slideWrap__arrow',
@@ -27,9 +27,9 @@
                         },
                         breakpoints: {
                             1024: {
-                                height: 'calc(100vh - 50px)',
+                                // height: 'calc(100vh - 50px)',
                             },
-                            500: {
+                            600: {
                                 height: 450,
                                 pagination: false,
                                 arrows: false

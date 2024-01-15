@@ -130,9 +130,15 @@
             }
         }
     }
+    &__mid{
+        display: flex;
+        justify-content: center;
+    }
     &__text{
         font-size: 18px;
-        line-height: 160%
+        line-height: 160%;
+        max-width: 720px;
+        text-align: justify;
     }
     &__gallery{
         display: flex;
@@ -225,7 +231,7 @@
     }
 
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         &__box{
             padding: 20px 0px;
             gap: 20px;

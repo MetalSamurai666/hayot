@@ -51,7 +51,7 @@
     &__info{
         margin: 30px 0px 30px;
         p{
-            font-size: 24px;
+            font-size: 30px;
             line-height: 140%;
         }
     }
@@ -61,17 +61,16 @@
     }
     &__btn{
         a{
-            width: 295px;
-            height: 85px;
-            border: 2px solid #E7E7E7;
+            width: 340px;
+            height: 95px;
             border-radius: 90px;
-            font-size: 24px;
+            background-color: $colorOrange;
+            font-size: 26px;
             line-height: 140%;
             @include df-aic-jcc;
             @include tr(.2s);
             &:hover{
-                background-color: #E7E7E7;
-                color: #343434;
+                background-color: darken($colorOrange, 10%);
             }
         }
     }
@@ -128,7 +127,7 @@
         }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         &__box{
             flex-direction: column;
         }

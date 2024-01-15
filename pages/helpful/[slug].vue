@@ -16,7 +16,6 @@
 </script>
 
 <template>
-    <NuxtLayout>
         <div class="helpSingle">
             <Wrapper
                 :wrapper="wrapper"
@@ -26,7 +25,6 @@
             />
             
         </div>
-    </NuxtLayout>
 </template>
 
 <style lang="scss">

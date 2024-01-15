@@ -35,4 +35,26 @@
             } 
         }
     }
+
+    @media (max-width: 600px) {
+        &__box{
+            padding: 20px 0px 5px;
+        }
+        &__list{
+            gap: 24px;
+            overflow-x: auto;
+            .item{
+                &__link{
+                    white-space: nowrap;
+                    font-size: 14px;
+                    &::after{
+                        right: -15px;
+                    }
+                }
+            }
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+    }
 }
