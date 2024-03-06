@@ -1,4 +1,4 @@
-export default defineI18nConfig(() => ({
+export default {
     legacy: false,
     locale: 'ru',
     messages: {
@@ -24,4 +24,4 @@ export default defineI18nConfig(() => ({
             attached_number: '2500+ tails <br> <span>attached <span/>in 5 years'
         }
     }
-}))
+}

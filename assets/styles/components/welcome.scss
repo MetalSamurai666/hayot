@@ -3,7 +3,7 @@
 
 .welcome {
     &__container{
-        padding: 200px 100px;
+        padding: 125px 100px;
     }
     &__slider{
         .slideWrap{
@@ -30,10 +30,13 @@
             &__next{
                 right: 0;
             }
+            &__pagination{
+                gap: 5px;
+            }
             &__page{
-                width: 85px;
-                height: 3px;
-                border-radius: 2px;
+                width: 33px;
+                height: 6px;
+                border-radius: 0px;
                 &.is-active{
                     transform: unset;
                     opacity: 1;
@@ -121,6 +124,13 @@
                     font-size: 22px;
                 }
             }
+        }
+    }
+    
+    
+    @media (max-width: 768px) {
+        &__container{
+            padding: 150px 50px 50px;
         }
     }
 

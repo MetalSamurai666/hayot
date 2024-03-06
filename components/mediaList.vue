@@ -31,14 +31,15 @@
                     <Splide 
                         class="splide slideMedia"
                         :options="{
-                            fixedWidth: '22%',
                             gap: 20,
-                            rewind: true,
+                            rewind: false,
                             // perPage: 4.1,
                             // perMove: 2,
                             // waitForTransition: true,
                             // wheelSleep: true,
                             // wheel: true,
+                            fixedWidth: 320,
+                            fixedHeight: 480,
                             pagination: false,
                             classes: {
                                 arrows: 'splide__arrows slideMedia__arrows',

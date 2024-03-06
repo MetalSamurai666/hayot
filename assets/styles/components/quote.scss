@@ -12,8 +12,8 @@
         display: none;
     }
     &__left{
-        flex-basis: 40%;
-        width: 40%;
+        flex-basis: 45%;
+        width: 45%;
     }
     &__img{
         display: flex;
@@ -26,8 +26,8 @@
         }
     }
     &__right{
-        flex-basis: 60%;
-        width: 60%;
+        flex-basis: 55%;
+        width: 55%;
         padding: 50px 60px;
         display: flex;
         flex-direction: column;
@@ -61,12 +61,12 @@
     }
     &__btn{
         a{
-            width: 340px;
-            height: 95px;
+            height: 85px;
             border-radius: 90px;
             background-color: $colorOrange;
-            font-size: 26px;
+            font-size: 28px;
             line-height: 140%;
+            padding: 0px 25px;
             @include df-aic-jcc;
             @include tr(.2s);
             &:hover{
@@ -161,9 +161,6 @@
         }
         &__mid{
             padding: 0 0 20px;
-        }
-        &__info{
-            text-align: justify;
         }
         &__logo{
             &.top{

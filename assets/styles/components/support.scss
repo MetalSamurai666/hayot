@@ -35,12 +35,12 @@
         @include df-jcc;
         a{
             @include df-aic-jcc;
-            width: 450px;
-            height: 100px;
+            height: 85px;
             background-color: #fff;
             border-radius: 200px;
             font-family: 'Object-M';
-            font-size: 30px;
+            font-size: 28px;
+            padding: 0px 25px;
             @include tr(.2s);
             &:hover{
                 background-color: #000;
@@ -97,8 +97,16 @@
         }
         &__btn{
             a{
-                height: 60px;
-                font-size: 22px;
+                width: 100%;
+                height: 65px;
+                font-size: 24px;
+                border: 1px solid #fff;
+                background: 0;
+                color: #fff;
+                &:hover{
+                    background-color: #fff;
+                    color: #000;
+                }
             }
         }
     }

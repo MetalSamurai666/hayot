@@ -5,6 +5,28 @@
         background-color: $colorOrange;
         border-radius: 25px;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    &.anhor{
+        .cardMedia__box{
+            background-color: #2F713A;
+        }
+    }
+    &.podrobno{
+        .cardMedia__box{
+            background-color: #ED1C24;
+        }
+    }
+    &.afisha{
+        .cardMedia__box{
+            background-color: #E13678;
+        }
+    }
+    &.darakchi{
+        .cardMedia__box{
+            background-color: #CF100D;
+        }
     }
     &__img{
         width: 100%;
@@ -24,7 +46,10 @@
         }
     }
     &__text{
-        padding: 20px 20px 50px;
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
         *{
             color: #fff;
         }
@@ -43,6 +68,10 @@
         &:hover{
             opacity: 0.9;
         }
+    }
+    &__src{
+        margin-top: auto;
+        margin-left: auto;
     }
 
     @media (max-width: 1024px) {

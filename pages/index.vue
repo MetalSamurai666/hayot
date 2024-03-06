@@ -27,6 +27,8 @@
                 img: 'media1.jpg',
                 title: 'Узбекистан: обращение с бездомными животными требует гуманизации',
                 date: '24 июля 2021',
+                mass: 'https://anhor.uz',
+                mass_img: 'mass/m1.png'
             },
             {
                 id: 2,
@@ -34,6 +36,8 @@
                 img: 'media2.jpg',
                 title: 'Здесь мой «хаёт», или собачье дело Ироды Маткаримовой',
                 date: '24 июля 2021',
+                mass: 'https://podrobno.uz',
+                mass_img: 'mass/pod.png'
             },
             {
                 id: 3,
@@ -41,6 +45,8 @@
                 img: 'media3.jpg',
                 title: 'Волонтёры приюта «Хаёт» провели в школах «уроки доброты»',
                 date: '24 июля 2021',
+                mass: 'https://afisha.uz',
+                mass_img: 'mass/afisha.png'
             },
             {
                 id: 4,
@@ -48,27 +54,35 @@
                 img: 'media4.jpg',
                 title: 'Чем живет первый приют для животных в узбекистане?',
                 date: '24 июля 2021',
+                mass: 'https://darakchi.uz',
+                mass_img: 'mass/darakchi.png'
             },
             {
                 id: 5,
                 url: '/',
-                img: 'media2.jpg',
-                title: 'Чем живет первый приют для животных в узбекистане?',
+                img: 'media1.jpg',
+                title: 'Узбекистан: обращение с бездомными животными требует гуманизации',
                 date: '24 июля 2021',
+                mass: 'https://anhor.uz',
+                mass_img: 'mass/m1.png'
             },
             {
                 id: 6,
                 url: '/',
-                img: 'media3.jpg',
-                title: 'Чем живет первый приют для животных в узбекистане?',
+                img: 'media2.jpg',
+                title: 'Здесь мой «хаёт», или собачье дело Ироды Маткаримовой',
                 date: '24 июля 2021',
+                mass: 'https://podrobno.uz',
+                mass_img: 'mass/pod.png'
             },
             {
                 id: 7,
                 url: '/',
-                img: 'media1.jpg',
-                title: 'Чем живет первый приют для животных в узбекистане?',
+                img: 'media3.jpg',
+                title: 'Волонтёры приюта «Хаёт» провели в школах «уроки доброты»',
                 date: '24 июля 2021',
+                mass: 'https://afisha.uz',
+                mass_img: 'mass/afisha.png'
             },
             {
                 id: 8,
@@ -76,7 +90,45 @@
                 img: 'media4.jpg',
                 title: 'Чем живет первый приют для животных в узбекистане?',
                 date: '24 июля 2021',
+                mass: 'https://darakchi.uz',
+                mass_img: 'mass/darakchi.png'
             },
+            // {
+            //     id: 5,
+            //     url: '/',
+            //     img: 'media2.jpg',
+            //     title: 'Чем живет первый приют для животных в узбекистане?',
+            //     date: '24 июля 2021',
+            //     mass: 'https://anhor.uz',
+            //     mass_img: 'mass/m1.png'
+            // },
+            // {
+            //     id: 6,
+            //     url: '/',
+            //     img: 'media3.jpg',
+            //     title: 'Чем живет первый приют для животных в узбекистане?',
+            //     date: '24 июля 2021',
+            //     mass: 'https://anhor.uz',
+            //     mass_img: 'mass/m1.png'
+            // },
+            // {
+            //     id: 7,
+            //     url: '/',
+            //     img: 'media1.jpg',
+            //     title: 'Чем живет первый приют для животных в узбекистане?',
+            //     date: '24 июля 2021',
+            //     mass: 'https://anhor.uz',
+            //     mass_img: 'mass/m1.png'
+            // },
+            // {
+            //     id: 8,
+            //     url: '/',
+            //     img: 'media4.jpg',
+            //     title: 'Чем живет первый приют для животных в узбекистане?',
+            //     date: '24 июля 2021',
+            //     mass: 'https://anhor.uz',
+            //     mass_img: 'mass/m1.png'
+            // },
         ],
         alt: true
     })

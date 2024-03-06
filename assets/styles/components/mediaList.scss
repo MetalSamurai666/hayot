@@ -59,8 +59,7 @@
     &__all{
         margin-top: 25px;
         a{
-            width: 340px;
-            height: 90px;
+            height: 85px;
             border: 2px solid #000;
             display: flex;
             align-items: center;
@@ -68,6 +67,8 @@
             border-radius: 200px;
             font-family: "Object-M";
             font-size: 28px;
+            width: fit-content;
+            padding: 0px 25px;
             @include tr(.2s);
             span{
                 margin-left: 15px;

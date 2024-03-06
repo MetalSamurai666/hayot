@@ -53,10 +53,35 @@
         console.log('opening lang///')
         langState.value = !langState.value
     }
+
+
+
+
+    var prevScrollpos = window.pageYOffset;
+
+    /* Get the header element and it's position */
+    var headerDiv = document.getElementById("header")
+    // var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight
+
+    // window.onscroll = function() {
+    // var currentScrollPos = window.scrollY;
+
+    // /* if we're scrolling up, or we haven't passed the header,
+    //     show the header at the top */
+    // if (prevScrollpos > currentScrollPos  || currentScrollPos < headerBottom){  
+    //     headerDiv.style.top = "0";
+    // }
+    // else{
+    //     /* otherwise we're scrolling down & have passed the header so hide it */
+    //     headerDiv.style.top = "-7.2rem";
+    // } 
+
+    //     prevScrollpos = currentScrollPos;
+    // }
 </script>
 
 <template>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header__box">
             <div class="header__left">
                 <div class="header__logo">
@@ -111,17 +136,19 @@
                 </div>
                 
                 <div class="header__donate">
-                    <NuxtLink to="/donate">{{ $t('support') }}</NuxtLink>
+                    <NuxtLink to="/donate">
+                        <span class="text">{{ $t('support') }}</span> 
+                        <span class="heart"><img src="/logo/donheart.svg"></span> 
+                    </NuxtLink>
                 </div>
 
                 
             </div>
-
-            <div class="header__menu">
+            <!-- <div class="header__menu">
                 <button @click="openMenu">
                     <img src="/logo/menu.svg">
                 </button>
-            </div>
+            </div> -->
         </div>
     </header>
 </template>

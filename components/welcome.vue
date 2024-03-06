@@ -14,9 +14,10 @@
                     class="splide slideWrap"
                     :options="{
                         cover: true,
-                        autoplay: true,
+                        // autoplay: true,
                         interval: 3000,
                         // height: 'calc(100vh - 70px)',
+                        keyboard : true,
                         classes: {
                             arrows: 'splide__arrows slideWrap__arrows',
                             arrow : 'splide__arrow slideWrap__arrow',
